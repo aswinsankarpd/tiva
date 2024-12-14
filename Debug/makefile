@@ -13,6 +13,7 @@ ORDERED_OBJS += \
 "./main.obj" \
 "./syscfg/pinout.obj" \
 "./tm4c1294ncpdt_startup_ccs.obj" \
+"./Application/SystemInit/systemInit.obj" \
 "./Drivers/adc.obj" \
 "./Drivers/aes.obj" \
 "./Drivers/can.obj" \
@@ -62,6 +63,7 @@ RMDIR := RMDIR /S/Q
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir_vars.mk
+-include Application/SystemInit/subdir_vars.mk
 -include Drivers/subdir_vars.mk
 -include Drivers/ccs/Debug/subdir_vars.mk
 -include Drivers/ewarm/Exe/subdir_vars.mk
@@ -69,6 +71,7 @@ RMDIR := RMDIR /S/Q
 -include Drivers/rvmdk/subdir_vars.mk
 -include HAL/GPIO/subdir_vars.mk
 -include subdir_rules.mk
+-include Application/SystemInit/subdir_rules.mk
 -include Drivers/subdir_rules.mk
 -include Drivers/ccs/Debug/subdir_rules.mk
 -include Drivers/ewarm/Exe/subdir_rules.mk
@@ -192,8 +195,8 @@ SampleProject.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(A_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(GEN_MISC_FILES__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "main.obj" "syscfg\pinout.obj" "tm4c1294ncpdt_startup_ccs.obj" "Drivers\adc.obj" "Drivers\aes.obj" "Drivers\can.obj" "Drivers\comp.obj" "Drivers\cpu.obj" "Drivers\crc.obj" "Drivers\des.obj" "Drivers\eeprom.obj" "Drivers\emac.obj" "Drivers\epi.obj" "Drivers\epi_workaround_ccs.obj" "Drivers\flash.obj" "Drivers\fpu.obj" "Drivers\gpio.obj" "Drivers\hibernate.obj" "Drivers\i2c.obj" "Drivers\interrupt.obj" "Drivers\lcd.obj" "Drivers\mpu.obj" "Drivers\onewire.obj" "Drivers\pwm.obj" "Drivers\qei.obj" "Drivers\shamd5.obj" "Drivers\ssi.obj" "Drivers\sw_crc.obj" "Drivers\sysctl.obj" "Drivers\sysexc.obj" "Drivers\systick.obj" "Drivers\timer.obj" "Drivers\uart.obj" "Drivers\udma.obj" "Drivers\usb.obj" "Drivers\watchdog.obj" "HAL\GPIO\hal_gpio.obj" 
-	-$(RM) "main.d" "syscfg\pinout.d" "tm4c1294ncpdt_startup_ccs.d" "Drivers\adc.d" "Drivers\aes.d" "Drivers\can.d" "Drivers\comp.d" "Drivers\cpu.d" "Drivers\crc.d" "Drivers\des.d" "Drivers\eeprom.d" "Drivers\emac.d" "Drivers\epi.d" "Drivers\flash.d" "Drivers\fpu.d" "Drivers\gpio.d" "Drivers\hibernate.d" "Drivers\i2c.d" "Drivers\interrupt.d" "Drivers\lcd.d" "Drivers\mpu.d" "Drivers\onewire.d" "Drivers\pwm.d" "Drivers\qei.d" "Drivers\shamd5.d" "Drivers\ssi.d" "Drivers\sw_crc.d" "Drivers\sysctl.d" "Drivers\sysexc.d" "Drivers\systick.d" "Drivers\timer.d" "Drivers\uart.d" "Drivers\udma.d" "Drivers\usb.d" "Drivers\watchdog.d" "HAL\GPIO\hal_gpio.d" 
+	-$(RM) "main.obj" "syscfg\pinout.obj" "tm4c1294ncpdt_startup_ccs.obj" "Application\SystemInit\systemInit.obj" "Drivers\adc.obj" "Drivers\aes.obj" "Drivers\can.obj" "Drivers\comp.obj" "Drivers\cpu.obj" "Drivers\crc.obj" "Drivers\des.obj" "Drivers\eeprom.obj" "Drivers\emac.obj" "Drivers\epi.obj" "Drivers\epi_workaround_ccs.obj" "Drivers\flash.obj" "Drivers\fpu.obj" "Drivers\gpio.obj" "Drivers\hibernate.obj" "Drivers\i2c.obj" "Drivers\interrupt.obj" "Drivers\lcd.obj" "Drivers\mpu.obj" "Drivers\onewire.obj" "Drivers\pwm.obj" "Drivers\qei.obj" "Drivers\shamd5.obj" "Drivers\ssi.obj" "Drivers\sw_crc.obj" "Drivers\sysctl.obj" "Drivers\sysexc.obj" "Drivers\systick.obj" "Drivers\timer.obj" "Drivers\uart.obj" "Drivers\udma.obj" "Drivers\usb.obj" "Drivers\watchdog.obj" "HAL\GPIO\hal_gpio.obj" 
+	-$(RM) "main.d" "syscfg\pinout.d" "tm4c1294ncpdt_startup_ccs.d" "Application\SystemInit\systemInit.d" "Drivers\adc.d" "Drivers\aes.d" "Drivers\can.d" "Drivers\comp.d" "Drivers\cpu.d" "Drivers\crc.d" "Drivers\des.d" "Drivers\eeprom.d" "Drivers\emac.d" "Drivers\epi.d" "Drivers\flash.d" "Drivers\fpu.d" "Drivers\gpio.d" "Drivers\hibernate.d" "Drivers\i2c.d" "Drivers\interrupt.d" "Drivers\lcd.d" "Drivers\mpu.d" "Drivers\onewire.d" "Drivers\pwm.d" "Drivers\qei.d" "Drivers\shamd5.d" "Drivers\ssi.d" "Drivers\sw_crc.d" "Drivers\sysctl.d" "Drivers\sysexc.d" "Drivers\systick.d" "Drivers\timer.d" "Drivers\uart.d" "Drivers\udma.d" "Drivers\usb.d" "Drivers\watchdog.d" "HAL\GPIO\hal_gpio.d" 
 	-$(RM) "Drivers\epi_workaround_ccs.d" 
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
 	-@echo 'Finished clean'

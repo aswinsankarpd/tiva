@@ -1,7 +1,7 @@
 # FIXED
 
 main.obj: ../main.c
-main.obj: syscfg/pinout.h
+main.obj: C:/Users/Aswin/workspace_v12/SampleProject/Application/SystemInit/systemInit.h
 main.obj: C:/Users/Aswin/workspace_v12/SampleProject/HAL/GPIO/hal_gpio.h
 main.obj: C:/Users/Aswin/workspace_v12/SampleProject/Interface/commonIncludes.h
 main.obj: C:/ti/ccs1281/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdio.h
@@ -25,11 +25,12 @@ main.obj: C:/ti/tivaware_c_series_2_1_4_178/driverlib/pin_map.h
 main.obj: C:/ti/tivaware_c_series_2_1_4_178/driverlib/rom.h
 main.obj: C:/ti/tivaware_c_series_2_1_4_178/driverlib/rom_map.h
 main.obj: C:/ti/tivaware_c_series_2_1_4_178/driverlib/sysctl.h
+main.obj: syscfg/pinout.h
 main.obj: C:/Users/Aswin/workspace_v12/SampleProject/Drivers/gpio.h
 
 ../main.c:
 
-syscfg/pinout.h:
+C:/Users/Aswin/workspace_v12/SampleProject/Application/SystemInit/systemInit.h:
 
 C:/Users/Aswin/workspace_v12/SampleProject/HAL/GPIO/hal_gpio.h:
 
@@ -76,6 +77,8 @@ C:/ti/tivaware_c_series_2_1_4_178/driverlib/rom.h:
 C:/ti/tivaware_c_series_2_1_4_178/driverlib/rom_map.h:
 
 C:/ti/tivaware_c_series_2_1_4_178/driverlib/sysctl.h:
+
+syscfg/pinout.h:
 
 C:/Users/Aswin/workspace_v12/SampleProject/Drivers/gpio.h:
 

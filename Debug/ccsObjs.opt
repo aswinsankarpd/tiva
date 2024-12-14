@@ -1,6 +1,7 @@
 "./main.obj"
 "./syscfg/pinout.obj"
 "./tm4c1294ncpdt_startup_ccs.obj"
+"./Application/SystemInit/systemInit.obj"
 "./Drivers/adc.obj"
 "./Drivers/aes.obj"
 "./Drivers/can.obj"

@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//Debug/Application/SystemInit/subdir_rules.mk=UTF-8
+encoding//Debug/Application/SystemInit/subdir_vars.mk=UTF-8
 encoding//Debug/Drivers/ccs/Debug/subdir_rules.mk=UTF-8
 encoding//Debug/Drivers/ccs/Debug/subdir_vars.mk=UTF-8
 encoding//Debug/Drivers/ewarm/Exe/subdir_rules.mk=UTF-8
