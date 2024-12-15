@@ -16,4 +16,6 @@ void systemInit(void)
     gpioInit();
 
     uartInit();
+
+    uartSendBlocking("Hello %d", 8);
 }

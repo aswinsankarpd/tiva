@@ -10,6 +10,8 @@
 #include "gpio.h"
 #include "hal_gpio.h"
 
+#define MAX_MESSAGE_LENGTH 255
+
 void uartInit(void)
 {
     uint32_t ui32SysClock = 0;
@@ -29,5 +31,21 @@ void uartInit(void)
                         (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
                          UART_CONFIG_PAR_NONE));
 
-    UARTCharPut(UART0_BASE, 'H');
+}
+
+void uartSendBlocking(const char *format, ...)
+{
+    char message[MAX_MESSAGE_LENGTH] = {0};
+    va_list args;
+    va_start(args, format);
+
+    uint8_t length = vsnprintf(message, MAX_MESSAGE_LENGTH, format, args);
+    va_end(args);
+
+    uint8_t index = 0;
+
+    for(index = 0; index < length; index++)
+    {
+        UARTCharPut(UART0_BASE, message[index]);
+    }
 }
