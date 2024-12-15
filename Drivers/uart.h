@@ -51,6 +51,7 @@ extern "C"
 {
 #endif
 
+#include "commonIncludes.h"
 //*****************************************************************************
 //
 // Values that can be passed to UARTIntEnable, UARTIntDisable, and UARTIntClear

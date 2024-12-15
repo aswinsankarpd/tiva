@@ -51,6 +51,7 @@ extern "C"
 {
 #endif
 
+#include "commonIncludes.h"
 //*****************************************************************************
 //
 // The following are values that can be passed to the

@@ -7,10 +7,13 @@
 
 #include "pinout.h"
 #include "hal_gpio.h"
+#include "hal_uart.h"
 
 void systemInit(void)
 {
     PinoutSet();
 
     gpioInit();
+
+    uartInit();
 }

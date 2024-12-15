@@ -36,6 +36,7 @@
 "./Drivers/usb.obj"
 "./Drivers/watchdog.obj"
 "./HAL/GPIO/hal_gpio.obj"
+"./HAL/UART/hal_uart.obj"
 "../tm4c1294ncpdt.cmd"
 "../Drivers/ccs/Debug/driverlib.lib"
 "../Drivers/rvmdk/driverlib.lib"

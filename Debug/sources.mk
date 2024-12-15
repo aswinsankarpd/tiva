@@ -132,4 +132,5 @@ Drivers/ewarm/Exe \
 Drivers/gcc \
 Drivers/rvmdk \
 HAL/GPIO \
+HAL/UART \
 

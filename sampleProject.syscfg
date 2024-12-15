@@ -10,7 +10,7 @@
  * These are the peripherals and settings in this configuration
  */
 const iGPIO1        = scripting.addPeripheral("GPIO");
-iGPIO1["0"].pu_pd   = "pd";
+iGPIO1["0"].pu_pd   = "pu";
 iGPIO1["0"].io      = "output";
 iGPIO1["0"].$assign = "PN0";
 iGPIO1.$name        = "MyGPIO1";

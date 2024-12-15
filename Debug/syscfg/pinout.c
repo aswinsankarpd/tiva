@@ -35,7 +35,7 @@
 //
 //*****************************************************************************
 
-// This file was automatically generated on 12/14/2024 at 8:03:05 PM
+// This file was automatically generated on 12/15/2024 at 11:24:55 PM
 // by TI PinMux version 1.21.0+3721
 //
 //*****************************************************************************
@@ -80,7 +80,7 @@ PinoutSet(void)
 	// for GPIO_PN0
     //
 	MAP_GPIOPinTypeGPIOOutput(GPIO_PORTN_BASE, GPIO_PIN_0);
-	MAP_GPIOPinWrite(GPIO_PORTN_BASE, GPIO_PIN_0, 0x0);
+	MAP_GPIOPinWrite(GPIO_PORTN_BASE, GPIO_PIN_0, GPIO_PIN_0);
 
     //
     // Configure the GPIO Pin Mux for PA0
