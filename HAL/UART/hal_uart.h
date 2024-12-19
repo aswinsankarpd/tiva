@@ -12,4 +12,6 @@ void uartInit(void);
 
 void uartSendBlocking(const char *format, ...);
 
+void uartInterruptCallback(void);
+
 #endif /* HAL_UART_HAL_UART_H_ */

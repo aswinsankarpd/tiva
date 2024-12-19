@@ -27,6 +27,7 @@ Application/SystemInit/systemInit.obj: C:/ti/tivaware_c_series_2_1_4_178/driverl
 Application/SystemInit/systemInit.obj: C:/ti/tivaware_c_series_2_1_4_178/driverlib/sysctl.h
 Application/SystemInit/systemInit.obj: C:/Users/Aswin/workspace_v12/SampleProject/Drivers/gpio.h
 Application/SystemInit/systemInit.obj: C:/Users/Aswin/workspace_v12/SampleProject/HAL/UART/hal_uart.h
+Application/SystemInit/systemInit.obj: C:/Users/Aswin/workspace_v12/SampleProject/Drivers/interrupt.h
 
 ../Application/SystemInit/systemInit.c:
 
@@ -81,4 +82,6 @@ C:/ti/tivaware_c_series_2_1_4_178/driverlib/sysctl.h:
 C:/Users/Aswin/workspace_v12/SampleProject/Drivers/gpio.h:
 
 C:/Users/Aswin/workspace_v12/SampleProject/HAL/UART/hal_uart.h:
+
+C:/Users/Aswin/workspace_v12/SampleProject/Drivers/interrupt.h:
 

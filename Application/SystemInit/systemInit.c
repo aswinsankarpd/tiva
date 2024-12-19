@@ -8,14 +8,17 @@
 #include "pinout.h"
 #include "hal_gpio.h"
 #include "hal_uart.h"
+#include "interrupt.h"
 
 void systemInit(void)
 {
+    IntMasterEnable();
+
     PinoutSet();
 
     gpioInit();
 
     uartInit();
 
-    uartSendBlocking("Hello %d", 8);
+//    uartSendBlocking("Hello %d", 8);
 }

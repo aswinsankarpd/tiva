@@ -16,6 +16,7 @@ HAL/UART/hal_uart.obj: C:/ti/ccs1281/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/in
 HAL/UART/hal_uart.obj: C:/ti/ccs1281/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdbool.h
 HAL/UART/hal_uart.obj: C:/ti/ccs1281/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/string.h
 HAL/UART/hal_uart.obj: C:/ti/ccs1281/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h
+HAL/UART/hal_uart.obj: ../HAL/UART/hal_uart.h
 HAL/UART/hal_uart.obj: C:/Users/Aswin/workspace_v12/SampleProject/Drivers/sysctl.h
 HAL/UART/hal_uart.obj: C:/Users/Aswin/workspace_v12/SampleProject/Drivers/gpio.h
 HAL/UART/hal_uart.obj: C:/Users/Aswin/workspace_v12/SampleProject/HAL/GPIO/hal_gpio.h
@@ -60,6 +61,8 @@ C:/ti/ccs1281/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdbool.h:
 C:/ti/ccs1281/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/string.h:
 
 C:/ti/ccs1281/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h:
+
+../HAL/UART/hal_uart.h:
 
 C:/Users/Aswin/workspace_v12/SampleProject/Drivers/sysctl.h:
 
