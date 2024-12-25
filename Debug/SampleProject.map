@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker PC v20.2.7                     
 ******************************************************************************
->> Linked Fri Dec 20 00:46:31 2024
+>> Linked Wed Dec 25 12:35:50 2024
 
 OUTPUT FILE NAME:   <SampleProject.out>
 ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 0000463d
@@ -147,16 +147,20 @@ MODULE SUMMARY
        ------                          ----    -------   -------
     .\
        tm4c1294ncpdt_startup_ccs.obj   12      520       0      
+    +--+-------------------------------+-------+---------+---------+
+       Total:                          12      520       0      
+                                                                
+    .\MyProject\
        main.obj                        16      0         0      
     +--+-------------------------------+-------+---------+---------+
-       Total:                          28      520       0      
+       Total:                          16      0         0      
                                                                 
-    .\Application\SystemInit\
+    .\MyProject\Application\SystemInit\
        systemInit.obj                  20      0         0      
     +--+-------------------------------+-------+---------+---------+
        Total:                          20      0         0      
                                                                 
-    .\Drivers\
+    .\MyProject\Drivers\
        sysctl.obj                      3974    596       0      
        gpio.obj                        2964    552       0      
        interrupt.obj                   960     268       620    
@@ -165,12 +169,12 @@ MODULE SUMMARY
     +--+-------------------------------+-------+---------+---------+
        Total:                          9542    1544      620    
                                                                 
-    .\HAL\GPIO\
+    .\MyProject\HAL\GPIO\
        hal_gpio.obj                    104     0         8      
     +--+-------------------------------+-------+---------+---------+
        Total:                          104     0         8      
                                                                 
-    .\HAL\UART\
+    .\MyProject\HAL\UART\
        hal_uart.obj                    344     0         1      
     +--+-------------------------------+-------+---------+---------+
        Total:                          344     0         1      

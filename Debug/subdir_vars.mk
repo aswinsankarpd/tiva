@@ -12,7 +12,6 @@ SYSCFG_SRCS += \
 ../sampleProject.syscfg 
 
 C_SRCS += \
-../main.c \
 ./syscfg/pinout.c \
 ../tm4c1294ncpdt_startup_ccs.c 
 
@@ -23,12 +22,10 @@ GEN_MISC_DIRS += \
 ./syscfg 
 
 C_DEPS += \
-./main.d \
 ./syscfg/pinout.d \
 ./tm4c1294ncpdt_startup_ccs.d 
 
 OBJS += \
-./main.obj \
 ./syscfg/pinout.obj \
 ./tm4c1294ncpdt_startup_ccs.obj 
 
@@ -40,7 +37,6 @@ GEN_MISC_DIRS__QUOTED += \
 "syscfg" 
 
 OBJS__QUOTED += \
-"main.obj" \
 "syscfg\pinout.obj" \
 "tm4c1294ncpdt_startup_ccs.obj" 
 
@@ -49,19 +45,17 @@ GEN_MISC_FILES__QUOTED += \
 "syscfg\summary.csv" 
 
 C_DEPS__QUOTED += \
-"main.d" \
 "syscfg\pinout.d" \
 "tm4c1294ncpdt_startup_ccs.d" 
 
 GEN_FILES__QUOTED += \
 "syscfg\pinout.c" 
 
-C_SRCS__QUOTED += \
-"../main.c" \
-"./syscfg/pinout.c" \
-"../tm4c1294ncpdt_startup_ccs.c" 
-
 SYSCFG_SRCS__QUOTED += \
 "../sampleProject.syscfg" 
+
+C_SRCS__QUOTED += \
+"./syscfg/pinout.c" \
+"../tm4c1294ncpdt_startup_ccs.c" 
 
 

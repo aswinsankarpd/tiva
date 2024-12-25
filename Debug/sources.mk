@@ -125,12 +125,16 @@ GEN_OPTS__QUOTED :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 . \
-Application/SystemInit \
-Drivers \
-Drivers/ccs/Debug \
-Drivers/ewarm/Exe \
-Drivers/gcc \
-Drivers/rvmdk \
-HAL/GPIO \
-HAL/UART \
+MyProject/Application/SystemInit \
+MyProject/Drivers \
+MyProject/Drivers/ccs/Debug \
+MyProject/Drivers/ewarm/Exe \
+MyProject/Drivers/gcc \
+MyProject/Drivers/rvmdk \
+MyProject/HAL/GPIO \
+MyProject/HAL/UART \
+MyProject \
+ThirdParty/FreeRTOS \
+ThirdParty/FreeRTOS/portable/CCS/ARM_CM4F \
+ThirdParty/FreeRTOS/portable/MemMang \
 
