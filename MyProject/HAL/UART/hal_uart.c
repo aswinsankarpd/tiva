@@ -17,6 +17,9 @@
 
 uint8_t receivedMessage = 0; // Renamed global variable
 
+cbFptr rxCb;
+cbFptr txCb;
+
 void uartInterruptCallback(void)
 {
     uint32_t ui32Status;
@@ -31,6 +34,7 @@ void uartInterruptCallback(void)
         UARTFIFOLevelSet(UART0_BASE, UART_FIFO_TX1_8, UART_FIFO_RX1_8);
 
         UARTCharPut(UART0_BASE, '1');
+
         receivedMessage = UARTCharGetNonBlocking(UART0_BASE);
     }
 
@@ -40,8 +44,11 @@ void uartInterruptCallback(void)
     }
 }
 
-void uartInit(void)
+void uartInit(cbFptr rxCallbak, cbFptr txCallback)
 {
+    rxCb = rxCallbak;
+    txCb = txCallback;
+
     uint32_t ui32SysClock = 0;
 
     ui32SysClock = SysCtlClockFreqSet((SYSCTL_XTAL_25MHZ |
@@ -74,8 +81,6 @@ void uartInit(void)
     {
         UARTCharGetNonBlocking(UART0_BASE);
     }
-
-    UARTCharPutNonBlocking(UART0_BASE, 'X');
 
     receivedMessage = UARTCharGetNonBlocking(UART0_BASE);
 }

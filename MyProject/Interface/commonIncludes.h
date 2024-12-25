@@ -13,6 +13,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <stdarg.h>
+#include <stdlib.h>
 
 #define SYSTEM_CLOCK   20000000
 

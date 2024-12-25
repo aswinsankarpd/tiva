@@ -9,6 +9,7 @@
 #include "hal_gpio.h"
 #include "hal_uart.h"
 #include "interrupt.h"
+#include "debugUART.h"
 
 void systemInit(void)
 {
@@ -18,6 +19,8 @@ void systemInit(void)
 
     gpioInit();
 
-    uartInit();
+    debugUartInit();
+
+    uartSendBlocking("System Started\r\n");
 
 }

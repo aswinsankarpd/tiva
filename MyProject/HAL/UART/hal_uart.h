@@ -8,7 +8,11 @@
 #ifndef HAL_UART_HAL_UART_H_
 #define HAL_UART_HAL_UART_H_
 
-void uartInit(void);
+#include "commonIncludes.h"
+
+typedef void (*cbFptr) (uint8_t);
+
+void uartInit(cbFptr, cbFptr);
 
 void uartSendBlocking(const char *format, ...);
 
