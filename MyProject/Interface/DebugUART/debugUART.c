@@ -35,7 +35,7 @@ void debugUartTxCb(uint8_t data)
 void debugUartInit(void)
 {
     uartInit(&debugUartRxCb, &debugUartTxCb);
-//    eCbuffStat_t retVal = circularBufferInit(&receptionBuffer, RECEPTION_BUFF_SIZE, RECEPTION_ELE_SIZE);
+    eCbuffStat_t retVal = circularBufferInit(&receptionBuffer, RECEPTION_BUFF_SIZE, RECEPTION_ELE_SIZE);
 }
 
 bool getCommandRxFlag(void)

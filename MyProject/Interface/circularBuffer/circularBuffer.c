@@ -8,7 +8,7 @@
 
 #include "circularBuffer.h"
 
-eCbuffStat_t circularBufferInit(sCBuffStruct_t * cBuff, uint8_t maxCapacity, uint8_t sizeOfElement)
+eCbuffStat_t circularBufferInit(sCBuffStruct_t * cBuff, uint16_t maxCapacity, uint8_t sizeOfElement)
 {
     eCbuffStat_t retVal = E_CBUFF_INIT_NOT_OK;
 

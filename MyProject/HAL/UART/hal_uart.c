@@ -33,8 +33,6 @@ void uartInterruptCallback(void)
         UARTFIFODisable(UART0_BASE);
         UARTFIFOLevelSet(UART0_BASE, UART_FIFO_TX1_8, UART_FIFO_RX1_8);
 
-        UARTCharPut(UART0_BASE, '1');
-
         receivedMessage = UARTCharGetNonBlocking(UART0_BASE);
     }
 

@@ -30,7 +30,7 @@ typedef struct
     void * array;
 }sCBuffStruct_t;
 
-eCbuffStat_t circularBufferInit(sCBuffStruct_t * cBuff, uint8_t maxCapacity, uint8_t sizeOfElement);
+eCbuffStat_t circularBufferInit(sCBuffStruct_t * cBuff, uint16_t maxCapacity, uint8_t sizeOfElement);
 
 eCbuffStat_t cBuffEnqueue(sCBuffStruct_t * cBuff, void * data, uint8_t dataSize);
 

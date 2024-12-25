@@ -45,6 +45,27 @@
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.LITTLE_ENDIAN.354049594" name="Little endian code [See 'General' page to edit] (--little_endian, -me)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.LITTLE_ENDIAN" value="true" valueType="boolean"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.INCLUDE_PATH.1162013455" name="Add dir to #include search path (--include_path, -I)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.INCLUDE_PATH" valueType="includePath">
 									<listOptionValue builtIn="false" value="${PROJECT_ROOT}"/>
+									<listOptionValue builtIn="false" value="C:\ti\TivaWare_C_Series-2.2.0.295\inc"/>
+									<listOptionValue builtIn="false" value="C:\ti\ccs1281\ccs\tools\compiler\ti-cgt-arm_20.2.7.LTS\lib\"/>
+									<listOptionValue builtIn="false" value="C:\ti\ccs1281\ccs\tools\compiler\ti-cgt-arm_20.2.7.LTS\include"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/MyProject}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/MyProject/Application}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/MyProject/Application/SystemInit}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/MyProject/Drivers}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/MyProject/Drivers/ccs}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/MyProject/Drivers/ewarm}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/MyProject/Drivers/gcc}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/MyProject/Drivers/rvmdk}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/MyProject/HAL}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/MyProject/HAL/GPIO}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/MyProject/HAL/UART}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/MyProject/Interface}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/MyProject/Interface/circularBuffer}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/MyProject/Interface/DebugUART}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/ThirdParty}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/ThirdParty/FreeRTOS}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/ThirdParty/FreeRTOS/include}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/${ProjName}/ThirdParty/FreeRTOS/portable}"/>
 									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.DIAG_WARNING.419115512" name="Treat diagnostic &lt;id&gt; as warning (--diag_warning, -pdsw)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.DIAG_WARNING" valueType="stringList">
@@ -172,8 +193,8 @@
 							</tool>
 							<tool id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.exe.linkerDebug.98866128" name="Arm Linker" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.exe.linkerDebug">
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.linkerID.MAP_FILE.192137876" name="Link information (map) listed into &lt;file&gt; (--map_file, -m)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.linkerID.MAP_FILE" value="${ProjName}.map" valueType="string"/>
-								<option id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.linkerID.STACK_SIZE.1720365989" name="Set C system stack size (--stack_size, -stack)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.linkerID.STACK_SIZE" value="512" valueType="string"/>
-								<option id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.linkerID.HEAP_SIZE.12786002" name="Heap size for C/C++ dynamic memory allocation (--heap_size, -heap)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.linkerID.HEAP_SIZE" value="0" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.linkerID.STACK_SIZE.1720365989" name="Set C system stack size (--stack_size, -stack)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.linkerID.STACK_SIZE" value="1024" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.linkerID.HEAP_SIZE.12786002" name="Heap size for C/C++ dynamic memory allocation (--heap_size, -heap)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.linkerID.HEAP_SIZE" value="1024" valueType="string"/>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.linkerID.OUTPUT_FILE.1565464044" name="Specify output file name (--output_file, -o)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.linkerID.OUTPUT_FILE" value="${ProjName}.out" valueType="string"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.linkerID.LIBRARY.1685072956" name="Include library file or command file as input (--library, -l)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.linkerID.LIBRARY" useByScannerDiscovery="false" valueType="libs">
 									<listOptionValue builtIn="false" value="libc.a"/>
@@ -196,7 +217,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="tm4c1294ncpdt_startup_ccs_gcc.c|tm4c1294ncpdt.lds" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="ThirdParty|tm4c1294ncpdt_startup_ccs_gcc.c|tm4c1294ncpdt.lds" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
