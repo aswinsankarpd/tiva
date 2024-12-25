@@ -1,0 +1,4 @@
+Pin#, PORT IO, Function, Pull Down, Pull Up, Direction, User Name
+107, PN0, GPIO_PN0, false, true, Output, MyGPIO1
+33, PA0, U0RX, , , , virtualComPort
+34, PA1, U0TX, , , , virtualComPort
