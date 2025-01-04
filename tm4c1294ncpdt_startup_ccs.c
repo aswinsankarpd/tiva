@@ -4,7 +4,7 @@
 //
 // Copyright (c) 2011-2014 Texas Instruments Incorporated.  All rights reserved.
 // Software License Agreement
-// 
+//
 // Software License Agreement
 //
 // Texas Instruments (TI) is supplying this software for use solely and
@@ -23,6 +23,7 @@
 //*****************************************************************************
 
 #include <stdint.h>
+#include "FreeRTOS.h"
 
 //*****************************************************************************
 //
@@ -54,7 +55,10 @@ extern uint32_t __STACK_TOP;
 // External declarations for the interrupt handlers used by the application.
 //
 //*****************************************************************************
-// To be added by user
+extern void xPortPendSVHandler(void);
+extern void vPortSVCHandler(void);
+extern void xPortSysTickHandler(void);
+
 
 //*****************************************************************************
 //
@@ -67,7 +71,7 @@ extern uint32_t __STACK_TOP;
 void (* const g_pfnVectors[])(void) =
 {
     (void (*)(void))((uint32_t)&__STACK_TOP),
-                                            // The initial stack pointer
+    // The initial stack pointer
     ResetISR,                               // The reset handler
     NmiSR,                                  // The NMI handler
     FaultISR,                               // The hard fault handler
@@ -78,11 +82,11 @@ void (* const g_pfnVectors[])(void) =
     0,                                      // Reserved
     0,                                      // Reserved
     0,                                      // Reserved
-    IntDefaultHandler,                      // SVCall handler
+    vPortSVCHandler,                        // SVCall handler
     IntDefaultHandler,                      // Debug monitor handler
     0,                                      // Reserved
-    IntDefaultHandler,                      // The PendSV handler
-    IntDefaultHandler,                      // The SysTick handler
+    xPortPendSVHandler,                     // The PendSV handler
+    xPortSysTickHandler,                    // The SysTick handler
     IntDefaultHandler,                      // GPIO Port A
     IntDefaultHandler,                      // GPIO Port B
     IntDefaultHandler,                      // GPIO Port C
@@ -233,7 +237,7 @@ NmiSR(void)
     //
     // Enter an infinite loop.
     //
-    while(1)
+    while (1)
     {
     }
 }
@@ -251,7 +255,7 @@ FaultISR(void)
     //
     // Enter an infinite loop.
     //
-    while(1)
+    while (1)
     {
     }
 }
@@ -269,7 +273,7 @@ IntDefaultHandler(void)
     //
     // Go into an infinite loop.
     //
-    while(1)
+    while (1)
     {
     }
 }
