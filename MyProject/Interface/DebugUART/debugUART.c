@@ -42,3 +42,33 @@ bool getCommandRxFlag(void)
 {
     return commandRxFlag;
 }
+
+void setCommandRxFlag(bool flag)
+{
+    commandRxFlag = flag;
+}
+
+bool retreiveCommand(uint8_t * command)
+{
+    bool retVal = false;
+
+    uint8_t idx = 0;
+
+    while(1)
+    {
+        cBuffDequeue(&receptionBuffer, (void *)&command[idx],1);
+
+        if(command[idx] == '\r')
+        {
+            break;
+        }
+        idx++;
+    }
+
+    if( idx > 1)
+    {
+        retVal = true;
+    }
+
+    return retVal;
+}

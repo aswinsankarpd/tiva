@@ -22,24 +22,19 @@ cbFptr txCb;
 
 void uartInterruptCallback(void)
 {
-    uint32_t ui32Status;
-
-    ui32Status = UARTIntStatus(UART0_BASE, true);
-
-    UARTIntClear(UART0_BASE, ui32Status);
+    uint32_t ui32Status = UARTIntStatus(UART0_BASE, true);
 
     if (ui32Status & UART_INT_RX)
     {
-        UARTFIFODisable(UART0_BASE);
-        UARTFIFOLevelSet(UART0_BASE, UART_FIFO_TX1_8, UART_FIFO_RX1_8);
-
+        rxCb(receivedMessage);
         receivedMessage = UARTCharGetNonBlocking(UART0_BASE);
     }
-
-    if (ui32Status & UART_INT_TX)
+    else if (ui32Status & UART_INT_TX)
     {
 
     }
+
+    UARTIntClear(UART0_BASE, ui32Status);
 }
 
 void uartInit(cbFptr rxCallbak, cbFptr txCallback)
@@ -54,6 +49,7 @@ void uartInit(cbFptr rxCallbak, cbFptr txCallback)
                                        SYSCTL_USE_PLL), SYSTEM_CLOCK);
 
     SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+
     while (!SysCtlPeripheralReady(SYSCTL_PERIPH_UART0))
     {
         // Wait for the UART peripheral to be ready
@@ -68,17 +64,13 @@ void uartInit(cbFptr rxCallbak, cbFptr txCallback)
                         (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
                          UART_CONFIG_PAR_NONE));
 
-    UARTFIFODisable(UART0_BASE);
+    UARTFIFOEnable(UART0_BASE);
+    UARTFIFOLevelSet(UART0_BASE, UART_FIFO_TX1_8, UART_FIFO_RX1_8);
 
     UARTIntClear(UART0_BASE, UART_INT_RX | UART_INT_TX);
 
     UARTIntRegister(UART0_BASE, uartInterruptCallback);
     UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_TX);
-
-    while (UARTCharsAvail(UART0_BASE))
-    {
-        UARTCharGetNonBlocking(UART0_BASE);
-    }
 
     receivedMessage = UARTCharGetNonBlocking(UART0_BASE);
 }
@@ -96,9 +88,8 @@ void uartSendBlocking(const char *format, ...)
     int length = vsnprintf(message, MAX_MESSAGE_LENGTH, format, args);
     va_end(args);
 
-    if (length < 0) // Error in formatting
+    if (length < 0)
     {
-        // Handle error (e.g., log, assert, etc.)
         return;
     }
 

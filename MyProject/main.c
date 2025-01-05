@@ -5,38 +5,21 @@
  */
 
 #include "systemInit.h"
-#include "hal_gpio.h"
-#include "FreeRTOSConfig.h"
-#include "FreeRTOS.h"
-#include "task.h"
-#include "queue.h"
-#include "debugUART.h"
-#include "hal_uart.h"
-
-void demoSerialTask(void *pvParameters);
+#include "commonIncludes.h"
+#include "debugCLI.h"
 
 int main(void)
 {
     systemInit();
 
-    setGpioPin(E_LED_1, E_PIN_HIGH);
-
-    xTaskCreate(demoSerialTask, (const portCHAR *)"Serial",
-                configMINIMAL_STACK_SIZE, NULL, 1, NULL);
-
-    vTaskStartScheduler();
-
-}
-
-// Write text over the Stellaris debug interface UART port
-void demoSerialTask(void *pvParameters)
-{
-    for (;;)
+    while(1)
     {
-        uartSendBlocking("Hello, world from FreeRTOS 10.2!\r\n");
-        vTaskDelay(5000 / portTICK_PERIOD_MS);
+        debugCLI();
     }
+
 }
+
+
 
 /*  ASSERT() Error function
  *

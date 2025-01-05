@@ -18,4 +18,8 @@ void debugUartInit(void);
 
 bool getCommandRxFlag(void);
 
+void setCommandRxFlag(bool);
+
+bool retreiveCommand(uint8_t * );
+
 #endif /* MYPROJECT_INTERFACE_DEBUGUART_DEBUGUART_H_ */
